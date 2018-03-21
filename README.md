@@ -160,7 +160,8 @@ Once the WSGI file was created, I made a virtual host .conf file.
 
 My configuration for the .conf file:
 
-```<VirtualHost *:80>
+```
+<VirtualHost *:80>
      ServerName 18.188.90.162
      ServerAdmin admin@18.188.90.162
      #Location of the items-catalog WSGI file
