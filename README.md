@@ -144,7 +144,7 @@ The next step was to alter all of my python files used to connect to the databas
 I then created the .wsgi file in my project's root directory with the following:
 
 ```import sys
-iport logging
+import logging
 logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0,"/var/www/ItemCatalog")
 from __init__ import app as application```
@@ -159,8 +159,7 @@ Once the WSGI file was created, I made a virtual host .conf file.
 
 My configuration for the .conf file:
 
-```
-<VirtualHost *:80>
+```<VirtualHost *:80>
      ServerName 18.188.90.162
      ServerAdmin admin@18.188.90.162
      #Location of the items-catalog WSGI file
@@ -182,8 +181,7 @@ My configuration for the .conf file:
       ErrorLog ${APACHE_LOG_DIR}/error.log
       LogLevel warn
       CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
-```
+</VirtualHost>```
 
 Restarted the server:
 
