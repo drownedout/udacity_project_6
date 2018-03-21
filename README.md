@@ -147,7 +147,8 @@ I then created the .wsgi file in my project's root directory with the following:
 import logging
 logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0,"/var/www/ItemCatalog")
-from __init__ import app as application```
+from __init__ import app as application
+```
 
 ## Apache Virtual Host Configuration
 
@@ -181,7 +182,8 @@ My configuration for the .conf file:
       ErrorLog ${APACHE_LOG_DIR}/error.log
       LogLevel warn
       CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>```
+</VirtualHost>
+```
 
 Restarted the server:
 
